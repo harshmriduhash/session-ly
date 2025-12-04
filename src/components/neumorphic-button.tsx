@@ -6,7 +6,7 @@ import type { buttonVariants } from "@/components/ui/button";
 
 interface NeumorphicButtonProps
   extends React.ComponentProps<typeof Button>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   neumorphic?: boolean;
 }
 
@@ -20,33 +20,33 @@ const NeumorphicButton: React.FC<NeumorphicButtonProps> = ({
 }) => {
   const neumorphicStyles = neumorphic
     ? cn(
-        // Base neumorphic styling with gradients and shadows
-        "relative cursor-pointer rounded-full font-semibold transition-all duration-300 transform overflow-hidden",
-        "bg-gradient-to-b from-slate-100 to-slate-200 hover:from-slate-50 hover:to-slate-200",
-        "shadow-lg shadow-slate-200/60 hover:shadow-xl hover:shadow-slate-300/70",
-        "border border-slate-200/50 text-slate-700",
+      // Base neumorphic styling with gradients and shadows
+      "relative cursor-pointer rounded-full font-semibold transition-all duration-300 transform overflow-hidden",
+      "bg-gradient-to-b from-slate-100 to-slate-200 hover:from-slate-50 hover:to-slate-200",
+      "shadow-lg shadow-slate-200/60 hover:shadow-xl hover:shadow-slate-300/70",
+      "border border-slate-200/50 text-slate-700",
 
-        // Dark mode styling
-        "dark:bg-gradient-to-b dark:from-slate-900/30 dark:to-slate-700/10",
-        "dark:hover:bg-slate-500/30 dark:hover:text-gray-300",
-        "dark:border-slate-600/50 dark:hover:border-slate-500/30",
-        "dark:shadow-black/10 dark:hover:shadow-md dark:hover:shadow-black/20",
-        "dark:text-slate-200",
+      // Dark mode styling
+      "dark:bg-gradient-to-b dark:from-slate-900/30 dark:to-slate-700/10",
+      "dark:hover:bg-slate-500/30 dark:hover:text-gray-300",
+      "dark:border-slate-600/50 dark:hover:border-slate-500/30",
+      "dark:shadow-black/10 dark:hover:shadow-md dark:hover:shadow-black/20",
+      "dark:text-slate-200",
 
-        // Interactive states
-        "active:scale-95 hover:scale-[1.02]",
-        "disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none",
+      // Interactive states
+      "active:scale-95 hover:scale-[1.02]",
+      "disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none",
 
-        // Primary variant (blue button)
-        variant === "default" && [
-          "bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500",
-          "shadow-lg shadow-blue-200/60 hover:shadow-xl hover:shadow-blue-300/70",
-          "border-blue-400/50 text-white",
-          "dark:from-blue-600/80 dark:to-blue-700/80 dark:hover:from-blue-500/80 dark:hover:to-blue-600/80",
-          "dark:shadow-blue-900/20 dark:hover:shadow-blue-900/30",
-          "dark:border-blue-500/50",
-        ],
-      )
+      // Primary variant (blue button)
+      variant === "default" && [
+        "bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500",
+        "shadow-lg shadow-blue-200/60 hover:shadow-xl hover:shadow-blue-300/70",
+        "border-blue-400/50 text-white",
+        "dark:from-blue-600/80 dark:to-blue-700/80 dark:hover:from-blue-500/80 dark:hover:to-blue-600/80",
+        "dark:shadow-blue-900/20 dark:hover:shadow-blue-900/30",
+        "dark:border-blue-500/50",
+      ],
+    )
     : "";
 
   return (
